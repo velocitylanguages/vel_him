@@ -57,16 +57,13 @@ jobs:
       - name: 📦 Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg python3-pip fonts-noto-core
+          sudo apt-get install -y ffmpeg python3-pip fonts-noto-core fonts-dejavu-core
           echo "✅ System dependencies installed"
           echo "✅ Hindi fonts (Noto Core) installed"
+          echo "✅ English fonts (DejaVu Core) installed"
           echo ""
-          echo "📁 Available Devanagari fonts:"
-          fc-list :lang=hi | head -10 || echo "Checking font cache..."
-          fc-cache -f
-          echo ""
-          echo "🔍 Searching for Noto Devanagari:"
-          fc-list | grep -i "noto.*devanagari\|devanagari.*noto" || echo "Font may still be available"
+          echo "📁 Available fonts:"
+          fc-list | grep -E "DejaVu|Noto" | head -20
 
       - name: 📦 Install Python dependencies
         run: |
