@@ -473,9 +473,11 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
     
     # Font paths for different environments
     font_paths = {
-        # GitHub Actions (Ubuntu) - will be installed via workflow
+        # GitHub Actions (Ubuntu) - System installed fonts (fonts-noto-core)
         "ubuntu_noto": "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf",
         "ubuntu_noto_regular": "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf",
+        "ubuntu_noto_alt": "/usr/share/fonts/truetype/NotoSansDevanagari-Bold.ttf",
+        "ubuntu_noto_core": "/usr/share/fonts/truetype/noto/NotoSansDevanagari.ttf",
         "ubuntu_dejavu": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
         # Windows - Hindi supporting fonts (Nirmala is .ttc collection)
         "windows_nirmala": "C:/Windows/Fonts/Nirmala.ttf",
@@ -493,15 +495,15 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
         if for_hindi:
             # For Hindi text, prioritize Devanagari fonts
             if bold:
-                priority = ["ubuntu_noto", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal", "ubuntu_dejavu"]
+                priority = ["ubuntu_noto", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal", "ubuntu_dejavu"]
             else:
-                priority = ["ubuntu_noto_regular", "local_noto_regular", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal", "ubuntu_dejavu"]
+                priority = ["ubuntu_noto_regular", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto_regular", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal", "ubuntu_dejavu"]
         else:
             # For English text, any font works
             if bold:
-                priority = ["ubuntu_dejavu", "ubuntu_noto", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
+                priority = ["ubuntu_dejavu", "ubuntu_noto", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
             else:
-                priority = ["ubuntu_dejavu", "ubuntu_noto_regular", "local_noto_regular", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
+                priority = ["ubuntu_dejavu", "ubuntu_noto_regular", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto_regular", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
         
         for font_key in priority:
             font_path = font_paths.get(font_key)
