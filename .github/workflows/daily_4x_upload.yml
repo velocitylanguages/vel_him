@@ -57,9 +57,16 @@ jobs:
       - name: 📦 Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-noto-devanagari
+          sudo apt-get install -y ffmpeg python3-pip fonts-noto-core
           echo "✅ System dependencies installed"
-          echo "✅ Hindi font (Noto Sans Devanagari) installed"
+          echo "✅ Hindi fonts (Noto Core) installed"
+          echo ""
+          echo "📁 Available Devanagari fonts:"
+          fc-list :lang=hi | head -10 || echo "Checking font cache..."
+          fc-cache -f
+          echo ""
+          echo "🔍 Searching for Noto Devanagari:"
+          fc-list | grep -i "noto.*devanagari\|devanagari.*noto" || echo "Font may still be available"
 
       - name: 📦 Install Python dependencies
         run: |
