@@ -473,37 +473,49 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
     
     # Font paths for different environments
     font_paths = {
-        # GitHub Actions (Ubuntu) - System installed fonts (fonts-noto-core)
-        "ubuntu_noto": "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf",
-        "ubuntu_noto_regular": "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf",
-        "ubuntu_noto_alt": "/usr/share/fonts/truetype/NotoSansDevanagari-Bold.ttf",
-        "ubuntu_noto_core": "/usr/share/fonts/truetype/noto/NotoSansDevanagari.ttf",
-        "ubuntu_dejavu": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        # English fonts - MUST use Latin font for English text
+        "ubuntu_dejavu_bold": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "ubuntu_dejavu": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "ubuntu_dejavu_alt": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        
+        # Windows English fonts
+        "windows_segoe": "C:/Windows/Fonts/segoeui.ttf",
+        "windows_segoe_bold": "C:/Windows/Fonts/segoeuib.ttf",
+        "windows_arial": "C:/Windows/Fonts/arial.ttf",
+        "windows_arial_bold": "C:/Windows/Fonts/arialbd.ttf",
+        
+        # Hindi fonts - Devanagari script (fonts-noto-core)
+        "ubuntu_noto_bold": "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf",
+        "ubuntu_noto": "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf",
+        "ubuntu_noto_alt": "/usr/share/fonts/truetype/noto/NotoSansDevanagari.ttf",
+        
         # Windows - Hindi supporting fonts (Nirmala is .ttc collection)
         "windows_nirmala": "C:/Windows/Fonts/Nirmala.ttf",
         "windows_nirmala_ttc": "C:/Windows/Fonts/Nirmala.ttc",
         "windows_mangal": "C:/Windows/Fonts/mangal.ttf",
+        
         # Local fonts directory (downloaded)
-        "local_noto": str(BASE_DIR / "fonts" / "NotoSansDevanagari-Bold.ttf"),
-        "local_noto_regular": str(BASE_DIR / "fonts" / "NotoSansDevanagari-Regular.ttf"),
+        "local_noto_bold": str(BASE_DIR / "fonts" / "NotoSansDevanagari-Bold.ttf"),
+        "local_noto": str(BASE_DIR / "fonts" / "NotoSansDevanagari-Regular.ttf"),
     }
     
     # Try to load fonts with fallbacks
     def load_font_with_fallback(font_size, bold=False, for_hindi=False):
         """Load font with multiple fallback options"""
-        # Priority order for font paths
+        # CRITICAL: English text MUST use Latin fonts, Hindi text MUST use Devanagari fonts
+        
         if for_hindi:
-            # For Hindi text, prioritize Devanagari fonts
+            # For Hindi text - use Devanagari fonts only
             if bold:
-                priority = ["ubuntu_noto", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal", "ubuntu_dejavu"]
+                priority = ["ubuntu_noto_bold", "ubuntu_noto_alt", "local_noto_bold", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
             else:
-                priority = ["ubuntu_noto_regular", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto_regular", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal", "ubuntu_dejavu"]
+                priority = ["ubuntu_noto", "ubuntu_noto_alt", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
         else:
-            # For English text, any font works
+            # For English text - use Latin fonts ONLY
             if bold:
-                priority = ["ubuntu_dejavu", "ubuntu_noto", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
+                priority = ["ubuntu_dejavu_bold", "ubuntu_dejavu_alt", "windows_segoe_bold", "windows_arial_bold"]
             else:
-                priority = ["ubuntu_dejavu", "ubuntu_noto_regular", "ubuntu_noto_alt", "ubuntu_noto_core", "local_noto_regular", "windows_nirmala_ttc", "windows_nirmala", "windows_mangal"]
+                priority = ["ubuntu_dejavu", "ubuntu_dejavu_alt", "windows_segoe", "windows_arial"]
         
         for font_key in priority:
             font_path = font_paths.get(font_key)
@@ -513,31 +525,56 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
                 except Exception as e:
                     continue
         
-        # Last resort: try any available font
-        fallback_fonts = [
-            "DejaVuSans-Bold.ttf",
-            "DejaVuSans.ttf", 
-            "Arial.ttf",
-            "times.ttf"
-        ]
-        for fallback in fallback_fonts:
-            try:
-                return ImageFont.truetype(fallback, font_size)
-            except:
-                continue
+        # Fallback: try system fonts
+        if for_hindi:
+            # For Hindi, try Windows fonts
+            fallback_paths = ["C:/Windows/Fonts/Nirmala.ttf", "C:/Windows/Fonts/mangal.ttf"]
+        else:
+            # For English, try standard fonts
+            fallback_paths = [
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                "C:/Windows/Fonts/segoeui.ttf",
+                "C:/Windows/Fonts/arial.ttf",
+                "DejaVuSans-Bold.ttf",
+                "DejaVuSans.ttf",
+            ]
         
-        # Ultimate fallback
+        for fallback_path in fallback_paths:
+            if Path(fallback_path).exists():
+                try:
+                    return ImageFont.truetype(fallback_path, font_size)
+                except:
+                    continue
+        
+        # Ultimate fallback - try to find any suitable font
+        if for_hindi:
+            # For Hindi, try any Devanagari-capable font
+            try:
+                return ImageFont.truetype("Nirmala.ttf", font_size)
+            except:
+                pass
+        else:
+            # For English, try standard font names
+            for font_name in ["segoeui.ttf", "arial.ttf", "DejaVuSans-Bold.ttf"]:
+                try:
+                    return ImageFont.truetype(font_name, font_size)
+                except:
+                    continue
+        
         return ImageFont.load_default()
-    
+
     # Load fonts for different text elements
-    # Category uses English, so no special Hindi font needed
-    font_category = load_font_with_fallback(60, bold=True, for_hindi=False)
-    # Large font used for both English and Hindi text
-    font_large = load_font_with_fallback(85, bold=True, for_hindi=True)
-    # Pronunciation is Latin script, so standard font works
-    font_pronunciation = load_font_with_fallback(42, bold=False, for_hindi=False)
-    # Branding is English
-    font_branding = load_font_with_fallback(52, bold=True, for_hindi=False)
+    # CRITICAL: Load separate fonts for English and Hindi text
+    
+    # English fonts (Latin script)
+    font_category = load_font_with_fallback(60, bold=True, for_hindi=False)    # Category title
+    font_english = load_font_with_fallback(85, bold=True, for_hindi=False)     # English phrases
+    font_pronunciation = load_font_with_fallback(42, bold=False, for_hindi=False)  # Pronunciation (Latin)
+    font_branding = load_font_with_fallback(52, bold=True, for_hindi=False)    # Branding text
+    
+    # Hindi font (Devanagari script)
+    font_hindi = load_font_with_fallback(85, bold=True, for_hindi=True)        # Hindi phrases
 
     english = phrase_data.get("english", "")
     hindi = phrase_data.get("hindi", "")
@@ -580,9 +617,9 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
         stroke_fill=(0, 0, 0)
     )
 
-    # English text
+    # English text - uses Latin font (DejaVu)
     english_y = 470  # Adjusted for larger fonts
-    english_lines = wrap_text(english, font_large, VIDEO_WIDTH - 140)
+    english_lines = wrap_text(english, font_english, VIDEO_WIDTH - 140)
     total_height = len(english_lines) * 95  # Increased from 75 for larger fonts
 
     draw.rectangle(
@@ -596,15 +633,15 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
             (VIDEO_WIDTH // 2, y_pos),
             line,
             fill=(255, 255, 255),
-            font=font_large,
+            font=font_english,
             anchor="mm",
             stroke_width=2,
             stroke_fill=(0, 0, 0)
         )
 
-    # Hindi text
+    # Hindi text - uses Devanagari font (Noto Sans Devanagari)
     hindi_y = english_y + total_height + 110  # Increased from 100
-    hindi_lines = wrap_text(hindi, font_large, VIDEO_WIDTH - 140)
+    hindi_lines = wrap_text(hindi, font_hindi, VIDEO_WIDTH - 140)
     total_height = len(hindi_lines) * 95  # Increased from 75
 
     draw.rectangle(
@@ -618,7 +655,7 @@ def generate_complete_image(phrase_data: dict, category_english: str, output_pat
             (VIDEO_WIDTH // 2, y_pos),
             line,
             fill=(255, 255, 0),
-            font=font_large,
+            font=font_hindi,
             anchor="mm",
             stroke_width=2,
             stroke_fill=(0, 0, 0)
