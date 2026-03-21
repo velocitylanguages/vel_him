@@ -209,7 +209,37 @@
       "hindi": "आगे बढ़ते रहो, तुम बहुत अच्छा कर रहे हो!",
       "category": "Motivation",
       "generated_at": "2026-03-21T04:59:59.374527"
+    },
+    {
+      "english": "Slowly, it will happen.",
+      "hindi": "धीरे, हो जाएगा।",
+      "category": "Patience",
+      "generated_at": "2026-03-21T16:59:49.428131"
+    },
+    {
+      "english": "Wait a little, please.",
+      "hindi": "थोड़ा, इंतज़ार करो।",
+      "category": "Patience",
+      "generated_at": "2026-03-21T16:59:49.428140"
+    },
+    {
+      "english": "Don't rush, relax.",
+      "hindi": "जल्दी, मत करो।",
+      "category": "Patience",
+      "generated_at": "2026-03-21T16:59:49.428141"
+    },
+    {
+      "english": "Give it time, friend.",
+      "hindi": "वक्त, दो इसे।",
+      "category": "Patience",
+      "generated_at": "2026-03-21T16:59:49.428142"
+    },
+    {
+      "english": "Be calm, breathe deep.",
+      "hindi": "शांत, रहो।",
+      "category": "Patience",
+      "generated_at": "2026-03-21T16:59:49.428144"
     }
   ],
-  "last_updated": "2026-03-21T04:59:59.374530"
+  "last_updated": "2026-03-21T16:59:49.428145"
 }
