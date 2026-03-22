@@ -269,7 +269,37 @@
       "hindi": "मेरा प्यार, तुम्हारे लिए, बढ़ता है।",
       "category": "Love",
       "generated_at": "2026-03-22T05:35:36.889274"
+    },
+    {
+      "english": "You're a true friend, always there.",
+      "hindi": "तुम सच्चे दोस्त हो, हमेशा साथ हो।",
+      "category": "Friendship",
+      "generated_at": "2026-03-22T14:05:07.176703"
+    },
+    {
+      "english": "Let's hang out, anytime soon.",
+      "hindi": "मिलते हैं, जल्द ही कभी।",
+      "category": "Friendship",
+      "generated_at": "2026-03-22T14:05:07.176712"
+    },
+    {
+      "english": "Thanks for your support, friend.",
+      "hindi": "आपके साथ के लिए धन्यवाद, दोस्त।",
+      "category": "Friendship",
+      "generated_at": "2026-03-22T14:05:07.176713"
+    },
+    {
+      "english": "We've known each other, so long.",
+      "hindi": "हम एक-दूसरे को, बहुत समय से जानते हैं।",
+      "category": "Friendship",
+      "generated_at": "2026-03-22T14:05:07.176714"
+    },
+    {
+      "english": "Happy to see you, my friend.",
+      "hindi": "तुमसे मिलकर खुशी हुई, मेरे दोस्त।",
+      "category": "Friendship",
+      "generated_at": "2026-03-22T14:05:07.176715"
     }
   ],
-  "last_updated": "2026-03-22T05:35:36.889276"
+  "last_updated": "2026-03-22T14:05:07.176717"
 }
