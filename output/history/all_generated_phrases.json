@@ -569,7 +569,37 @@
       "hindi": "तुम्हारी मेहनत, रंग लाएगी।",
       "category": "Success",
       "generated_at": "2026-03-24T21:02:16.333201"
+    },
+    {
+      "english": "Speak slowly, clearly.",
+      "hindi": "धीरे, बोलें साफ़।",
+      "category": "Confidence",
+      "generated_at": "2026-03-25T20:58:22.693664"
+    },
+    {
+      "english": "I am learning, Hindi is fun.",
+      "hindi": "मैं सीख रहा हूँ, हिंदी मज़ेदार है।",
+      "category": "Confidence",
+      "generated_at": "2026-03-25T20:58:22.693672"
+    },
+    {
+      "english": "Don't worry, try again.",
+      "hindi": "चिंता मत करो, फिर कोशिश करो।",
+      "category": "Confidence",
+      "generated_at": "2026-03-25T20:58:22.693674"
+    },
+    {
+      "english": "Every day, a little more.",
+      "hindi": "हर दिन, थोड़ा और।",
+      "category": "Confidence",
+      "generated_at": "2026-03-25T20:58:22.693675"
+    },
+    {
+      "english": "Listen carefully, understand well.",
+      "hindi": "ध्यान से सुनो, समझो अच्छा।",
+      "category": "Confidence",
+      "generated_at": "2026-03-25T20:58:22.693676"
     }
   ],
-  "last_updated": "2026-03-24T21:02:16.333205"
+  "last_updated": "2026-03-25T20:58:22.693678"
 }
