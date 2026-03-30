@@ -1259,7 +1259,37 @@
       "hindi": "धीरे धीरे, पहाड़ हिल जाता है।",
       "category": "Confidence",
       "generated_at": "2026-03-30T19:38:22.007648"
+    },
+    {
+      "english": "Sunlight on my face, a happy feeling.",
+      "hindi": "धूप चेहरे पर, एक खुशहाल एहसास।",
+      "category": "Joy",
+      "generated_at": "2026-03-30T21:28:12.621153"
+    },
+    {
+      "english": "This moment, so much to enjoy.",
+      "hindi": "यह पल, आनंद लेने के लिए बहुत कुछ।",
+      "category": "Joy",
+      "generated_at": "2026-03-30T21:28:12.621162"
+    },
+    {
+      "english": "A gentle breeze, lifting my spirits.",
+      "hindi": "एक धीमी हवा, मन को ऊंचा उठाती।",
+      "category": "Joy",
+      "generated_at": "2026-03-30T21:28:12.621164"
+    },
+    {
+      "english": "My heart sings, with simple joys.",
+      "hindi": "मेरा दिल गाता है, साधारण खुशियों से।",
+      "category": "Joy",
+      "generated_at": "2026-03-30T21:28:12.621165"
+    },
+    {
+      "english": "Little victories, add up nicely.",
+      "hindi": "छोटी जीतें, अच्छी तरह जुड़ जाती हैं।",
+      "category": "Joy",
+      "generated_at": "2026-03-30T21:28:12.621166"
     }
   ],
-  "last_updated": "2026-03-30T19:38:22.007650"
+  "last_updated": "2026-03-30T21:28:12.621168"
 }
