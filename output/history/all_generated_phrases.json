@@ -1889,7 +1889,37 @@
       "hindi": "हवा तेज़ है, मैं झुकता हूँ, टूटता नहीं।",
       "category": "Confidence",
       "generated_at": "2026-04-21T17:05:02.003249"
+    },
+    {
+      "english": "The seed, waits for rain.",
+      "hindi": "बीज, बारिश का इंतज़ार करता है।",
+      "category": "Patience",
+      "generated_at": "2026-04-21T20:08:10.975192"
+    },
+    {
+      "english": "Still water, reflects clearly.",
+      "hindi": "स्थिर पानी, साफ़ दिखता है।",
+      "category": "Patience",
+      "generated_at": "2026-04-21T20:08:10.975201"
+    },
+    {
+      "english": "Slowly, the river shapes stone.",
+      "hindi": "धीरे, नदी पत्थर को तराशती है।",
+      "category": "Patience",
+      "generated_at": "2026-04-21T20:08:10.975203"
+    },
+    {
+      "english": "A quiet moment, brings deep thought.",
+      "hindi": "शांत पल, गहरी सोच लाता है।",
+      "category": "Patience",
+      "generated_at": "2026-04-21T20:08:10.975204"
+    },
+    {
+      "english": "Let the dust settle, then see.",
+      "hindi": "धूल को जमने दो, फिर देखो।",
+      "category": "Patience",
+      "generated_at": "2026-04-21T20:08:10.975205"
     }
   ],
-  "last_updated": "2026-04-21T17:05:02.003251"
+  "last_updated": "2026-04-21T20:08:10.975206"
 }
