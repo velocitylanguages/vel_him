@@ -15179,7 +15179,37 @@
       "hindi": "मेरी गलतियाँ मुझे सिखाती हैं, धीरे-धीरे और जल्दी",
       "category": "Confidence",
       "generated_at": "2026-08-01T17:00:52.786256"
+    },
+    {
+      "english": "Morning starts, breathe out, move slowly, balance.",
+      "hindi": "सुबह शुरू होती है, सांस छोड़ो, धीरे चलो, संतुलन।",
+      "category": "Balance",
+      "generated_at": "2026-08-01T20:11:53.569468"
+    },
+    {
+      "english": "Cup in both hands, steady now, no rush.",
+      "hindi": "दोनों हाथों में प्याला, अभी स्थिर रहो, जल्दी नहीं।",
+      "category": "Balance",
+      "generated_at": "2026-08-01T20:11:53.569476"
+    },
+    {
+      "english": "I check my pace, shoulders down, calm.",
+      "hindi": "मैं अपनी चाल देखता हूँ, कंधे नीचे, शांति।",
+      "category": "Balance",
+      "generated_at": "2026-08-01T20:11:53.569478"
+    },
+    {
+      "english": "Before speaking, pause, let the words settle.",
+      "hindi": "बोलने से पहले, रुक जाओ, शब्द बैठने दो।",
+      "category": "Balance",
+      "generated_at": "2026-08-01T20:11:53.569479"
+    },
+    {
+      "english": "Steps feel uneven, breathe, then try again.",
+      "hindi": "कदम असमान लगते हैं, सांस लो, फिर कोशिश।",
+      "category": "Balance",
+      "generated_at": "2026-08-01T20:11:53.569480"
     }
   ],
-  "last_updated": "2026-08-01T17:00:52.786257"
+  "last_updated": "2026-08-01T20:11:53.569482"
 }
