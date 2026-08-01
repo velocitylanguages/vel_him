@@ -15209,7 +15209,37 @@
       "hindi": "कदम असमान लगते हैं, सांस लो, फिर कोशिश।",
       "category": "Balance",
       "generated_at": "2026-08-01T20:11:53.569480"
+    },
+    {
+      "english": "I can manage this, one moment at a time",
+      "hindi": "मैं संभाल सकता हूँ, एक-एक पल करके",
+      "category": "Confidence",
+      "generated_at": "2026-08-01T22:56:09.146188"
+    },
+    {
+      "english": "My voice is steady, even when I'm nervous",
+      "hindi": "मेरी आवाज़ शांत है, भले मैं घबराऊँ",
+      "category": "Confidence",
+      "generated_at": "2026-08-01T22:56:09.146201"
+    },
+    {
+      "english": "I try again, my mind learns quickly",
+      "hindi": "मैं फिर कोशिश करता हूँ, दिमाग जल्दी सीखता है",
+      "category": "Confidence",
+      "generated_at": "2026-08-01T22:56:09.146202"
+    },
+    {
+      "english": "Today feels possible, I’m building my strength",
+      "hindi": "आज संभव लगता है, मैं अपनी ताकत बना रहा हूँ",
+      "category": "Confidence",
+      "generated_at": "2026-08-01T22:56:09.146203"
+    },
+    {
+      "english": "I speak slowly, my meaning stays clear",
+      "hindi": "मैं धीरे बोलता हूँ, मेरा मतलब साफ रहता है",
+      "category": "Confidence",
+      "generated_at": "2026-08-01T22:56:09.146204"
     }
   ],
-  "last_updated": "2026-08-01T20:11:53.569482"
+  "last_updated": "2026-08-01T22:56:09.146206"
 }
