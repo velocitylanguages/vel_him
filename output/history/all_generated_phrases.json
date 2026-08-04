@@ -15599,7 +15599,37 @@
       "hindi": "घबराओ, तब भी बस पकड़ो।",
       "category": "Courage",
       "generated_at": "2026-08-04T15:26:15.193423"
+    },
+    {
+      "english": "How’s your day, I’m listening, always.",
+      "hindi": "तुम्हारा दिन कैसा है, मैं सुन रहा हूँ, हमेशा।",
+      "category": "Friendship",
+      "generated_at": "2026-08-04T17:49:56.805927"
+    },
+    {
+      "english": "Text me, I’ll reply, no rush.",
+      "hindi": "मुझे मैसेज करो, मैं जवाब दूँगा, जल्दी नहीं।",
+      "category": "Friendship",
+      "generated_at": "2026-08-04T17:49:56.805937"
+    },
+    {
+      "english": "Your laugh, my favorite sound, today.",
+      "hindi": "तुम्हारी हँसी, मेरी पसंदीदा आवाज़, आज।",
+      "category": "Friendship",
+      "generated_at": "2026-08-04T17:49:56.805938"
+    },
+    {
+      "english": "We share snacks, and quiet jokes, too.",
+      "hindi": "हम स्नैक्स बाँटते हैं, और चुपचाप मज़ाक, भी।",
+      "category": "Friendship",
+      "generated_at": "2026-08-04T17:49:56.805939"
+    },
+    {
+      "english": "When you’re down, I sit near.",
+      "hindi": "जब तुम उदास हो, मैं पास बैठता हूँ।",
+      "category": "Friendship",
+      "generated_at": "2026-08-04T17:49:56.805941"
     }
   ],
-  "last_updated": "2026-08-04T15:26:15.193425"
+  "last_updated": "2026-08-04T17:49:56.805942"
 }
