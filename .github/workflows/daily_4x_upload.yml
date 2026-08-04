@@ -112,6 +112,7 @@ jobs:
           echo "# Threads" >> .env
           echo "THREADS_ACCESS_TOKEN=${{ secrets.THREADS_ACCESS_TOKEN }}" >> .env
           echo "THREADS_USER_ID=${{ secrets.THREADS_USER_ID }}" >> .env
+          echo "GH_PAT=${{ secrets.GH_PAT }}" >> .env
           echo "" >> .env
           echo "# TikTok" >> .env
           echo "TIKTOK_ACCESS_TOKEN=${{ secrets.TIKTOK_ACCESS_TOKEN }}" >> .env
