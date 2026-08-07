@@ -15959,7 +15959,37 @@
       "hindi": "मैं अपना दिन समेटता हूँ, आशा अंदर रहती है",
       "category": "Hope",
       "generated_at": "2026-08-07T00:43:11.860374"
+    },
+    {
+      "english": "I can ask again, slowly, no shame.",
+      "hindi": "मैं फिर पूछ सकता हूँ, धीरे-धीरे, बिना शर्म।",
+      "category": "Confidence",
+      "generated_at": "2026-08-07T01:30:00.254730"
+    },
+    {
+      "english": "Today I speak one sentence, then rest.",
+      "hindi": "आज मैं एक वाक्य बोलता हूँ, फिर आराम।",
+      "category": "Confidence",
+      "generated_at": "2026-08-07T01:30:00.254742"
+    },
+    {
+      "english": "My accent is a bridge, not a flaw.",
+      "hindi": "मेरा उच्चारण एक पुल है, दोष नहीं।",
+      "category": "Confidence",
+      "generated_at": "2026-08-07T01:30:00.254743"
+    },
+    {
+      "english": "I learn from mistakes, not from panic.",
+      "hindi": "मैं गलतियों से सीखता हूँ, घबराहट से नहीं।",
+      "category": "Confidence",
+      "generated_at": "2026-08-07T01:30:00.254744"
+    },
+    {
+      "english": "I pause to think, and speak clearly.",
+      "hindi": "मैं सोचने के लिए रुकता हूँ, और स्पष्ट बोलता हूँ।",
+      "category": "Confidence",
+      "generated_at": "2026-08-07T01:30:00.254746"
     }
   ],
-  "last_updated": "2026-08-07T00:43:11.860376"
+  "last_updated": "2026-08-07T01:30:00.254747"
 }
